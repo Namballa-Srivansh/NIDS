@@ -12,7 +12,7 @@ function App() {
   const [batchResult, setBatchResult] = useState(null);
   const [batchLoading, setBatchLoading] = useState(false);
 
-  // --- HACKATHON DEMO DATA ---
+  // --- DEMO DATA ---
   const normalPacket = [22, 1266342, 41, 2664, 456, 0, 64.9, 109.8, 976, 0, 158.0, 312.6, 7595.1, 67.1, 15075.5, 104051.3, 948537, 0, 1266342, 31658.5, 159355.2, 996324, 2, 317671, 7387.6, 19636.4, 104616, 1, 1328, 1424, 32.3, 34.7, 0, 976, 111.8, 239.6, 57449.7, 0, 1, 0, 113.1, 2664, 29200, 243, 24, 32, 0.0, 0, 0, 0.0, 0, 0]; 
   const attackPacket = [80, 5000000, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500, 1000, 500, 2000, 100, 5000000, 1000, 500, 2000, 100, 0, 0, 0, 0, 0, 4000, 0, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29200, 0, 0, 20, 0.0, 0, 0, 0.0, 0, 0]; 
 
@@ -66,13 +66,11 @@ function App() {
 
   return (
     <>
-      {/* Global Overlays */}
       <div className="cyber-grid" />
       <div className="scanlines" />
 
       <div className="relative z-10 min-h-screen py-10 px-4 md:px-8 max-w-7xl mx-auto flex flex-col gap-10">
         
-        {/* Header HUD */}
         <header className="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-[var(--border-color)] pb-6 relative">
           <div className="absolute top-0 left-0 w-8 h-1 bg-[var(--neon-cyan)] shadow-[0_0_10px_var(--neon-cyan)]" />
           <div className="absolute top-0 right-0 w-8 h-1 bg-[var(--neon-cyan)] shadow-[0_0_10px_var(--neon-cyan)]" />
@@ -80,8 +78,8 @@ function App() {
           <div className="flex items-center gap-4">
             <TerminalSquare className="w-12 h-12 text-[var(--neon-cyan)] text-glow-cyan" />
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold glitch-text uppercase m-0 leading-tight" data-text="NET.DEFENSE.SYS_">
-                NET.DEFENSE.SYS_
+              <h1 className="text-4xl md:text-5xl font-bold glitch-text uppercase m-0 leading-tight" data-text="NEURAL TRAFFIC ANALYZER">
+                NEURAL TRAFFIC ANALYZER
               </h1>
               <p className="text-[var(--neon-cyan)] opacity-80 text-sm tracking-widest uppercase animate-pulse">
                 [ AI Intrusion Detection Active ]
@@ -111,7 +109,6 @@ function App() {
           </div>
         </header>
 
-        {/* Console / Simulator Area */}
         <main className="grid lg:grid-cols-2 gap-8">
           
           {/* Left Column: Single Packet Simulator */}
@@ -142,7 +139,6 @@ function App() {
               </button>
             </div>
 
-            {/* Inference Display */}
             <div className="flex-1 bg-[rgba(0,0,0,0.6)] border border-[rgba(0,255,255,0.1)] p-4 min-h-[250px] flex flex-col items-center justify-center relative overflow-hidden">
               
               {!loading && !result && (
@@ -202,7 +198,6 @@ function App() {
             </div>
           </section>
 
-          {/* Right Column: Batch Upload & Telemetry */}
           <section className="cyber-panel p-6 flex flex-col gap-6">
             <div className="corner-tl" /><div className="corner-tr" /><div className="corner-bl" /><div className="corner-br" />
             
